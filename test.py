@@ -8,4 +8,3 @@ print(name,type(name))
 print(is_ok,type(is_ok))
 
 print('Hi', 'Kazuki', sep=',', end='.\n')
-
