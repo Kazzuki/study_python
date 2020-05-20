@@ -59,6 +59,7 @@ say_something('Hi!','kauzki','hoge')
 """
 # 良い例→タプルを用いて第2引数以降をタプル化する(可変長の引引数が用意できる)
 
+# 展開されて渡された*tはもう一度タプル化されて関数内ではタプルとして利用できる
 def say_something(word, *args):
     print(word)
     for word in args:
@@ -74,6 +75,7 @@ kauzki
 ('hoge', 'hoge')
 """
 # (?)
+# *によってタプルを展開して渡される。
 say_something('kauzki', *t)
 """
 kauzki
