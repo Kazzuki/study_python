@@ -55,18 +55,28 @@ print(colored('test',on_color='on_green'))
 
 # (★)【超重要！！】
 # サードパーティのパッケージはsite-packagesにinstallされる
-# 標準ライブラリはpython3.6の配下にいる
-# sys.pathにかかれている順位pythonはパッケージを読み込むので,指定外にパッケージがいる場合は読み込まれない！
+# 標準ライブラリはpython3.6の真下にいる
 # ローカルのパッケージがはじめに呼び出されるので、同じ名前にはしないこと！
 
-
+# 標準ライブラリ
 import collections
 import os
 import sys
-
+# サードパーティのライブラリ
 import termcolor
-
+# 他のチームが作ったライブラリ
 import lesson_package
-
+# 自分のライブラリ
 import config
 
+print(collections.__file__)
+print(termcolor.__file__)
+print(lesson_package.__file__)
+print(config.__file__)
+
+print(config.hello())
+
+# sys.pathにかかれている順位pythonはパッケージを読み込むので,指定外にパッケージがいる場合は読み込まれない！
+print('sys.pathの表示')
+for path in sys.path:
+    print(path)
