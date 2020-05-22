@@ -36,4 +36,14 @@ print(r)
 """
 
 from lesson_package.talk import human
+from lesson_package.talk import animal
+
+# *を使ったimportもできるが避けるようにしたほうが良い！
+# __init__.pyの__all__を始めに読み込む
+# from lesson_package.talk import *
+
 print(human.cry())
+print(human.sing())
+
+print(animal.cry())
+print(animal.sing())
