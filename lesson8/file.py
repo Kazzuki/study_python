@@ -16,10 +16,28 @@ with open('lesson8/test.txt','a') as f:
 """
 
 #93 ファイルの読み込み
+"""
 with open('lesson8/test.txt','r') as f:
-    while True:
-        chunk = 2
-        line = f.read(chunk)
-        print(line)
-        if not line:
-            break
+    # while True:
+    #     chunk = 2
+    #     line = f.read(chunk)
+    #     print(line)
+    #     if not line:
+    #         break
+    #seekを使う
+    print(f.tell())
+    print(f.read(1))
+    print(f.tell())
+    f.seek(3)
+    print(f.read(1))
+"""
+
+#95 ファイルの書き込み＋読み込み
+"""
+#'w+'→書き込みと読み込み。'r+'→読み込みと書き込み(ファイルが無ければエラーになる)
+with open('lesson8/test1.txt', 'w+') as f:
+    f.write(s)
+    f.seek(0)
+    print(f.read())
+
+"""
